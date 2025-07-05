@@ -4,6 +4,22 @@ function AdminDashboard() {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const formatDateTime = (dateTimeString) => {
+    try {
+      const date = new Date(dateTimeString);
+      return date.toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+      });
+    } catch (error) {
+      return dateTimeString; // fallback to original if parsing fails
+    }
+  };
+
   const fetchBookings = () => {
     const apiUrl = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
     fetch(`${apiUrl}/api/bookings`)
@@ -75,7 +91,7 @@ function AdminDashboard() {
                 <td>{b.name}</td>
                 <td>{b.email}</td>
                 <td>{b.service}</td>
-                <td>{b.time}</td>
+                <td>{formatDateTime(b.time)}</td>
               </tr>
             ))}
           </tbody>
