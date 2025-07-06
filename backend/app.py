@@ -17,6 +17,10 @@ mail = Mail(app)
 
 CORS(app)  # This allows your React frontend to make requests to Flask
 
+@app.route('/', methods=['GET'])
+def health_check():
+    return jsonify({"status": "healthy", "message": "Appointment Booking API is running!"})
+
 #bookings = []
 
 @app.route('/api/book', methods=['POST'])
@@ -98,4 +102,6 @@ def delete_all_bookings():
         return jsonify({"error": "Failed to delete bookings"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
