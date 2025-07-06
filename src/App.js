@@ -4,7 +4,6 @@ import BookingPage from './pages/BookingPage';
 import ViewBookings from './pages/ViewBookings';
 import AdminDashboard from './pages/AdminDashboard';
 
-
 function App() {
   return (
     <Router>
