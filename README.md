@@ -1,5 +1,5 @@
 Click2booknow
-Click2booknow is a full-stack appointment scheduling platform designed to simplify and streamline booking experiences for users and administrators.
+- Click2booknow is a full-stack appointment scheduling platform designed to simplify and streamline booking experiences for users and administrators.
 
 🔧 Tech Stack
 Frontend: React.js
@@ -25,4 +25,5 @@ RESTful API design for smooth frontend-backend integration.
 This project was built to explore full-stack web development and solve a real-world problem: helping service providers offer a clean, functional way for clients to schedule meetings without manual follow-up.
 
 🔗 Live Demo
-You can view a demonstration of the project [here]([url](https://yamanalbezrah.github.io/Personal-Website/click2booknow.html))
+You can view the live project here
+
