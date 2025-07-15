@@ -28,4 +28,4 @@ This project was built to explore full-stack web development and solve a real-wo
 
 🔗 **Live Demo**
 
-You can view the live project [here]((https://yamanalbezrah.github.io/Personal-Website/click2booknow.html))
+You can view the live project here: https://yamanalbezrah.github.io/Personal-Website/click2booknow.html
